@@ -1,9 +1,9 @@
-const App = () => {
+const Header = () => {
     return (
         <div>
-          
+
         </div>
     );
 };
 
-export {App};
+export {Header};

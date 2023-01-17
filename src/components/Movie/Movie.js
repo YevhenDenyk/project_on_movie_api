@@ -1,9 +1,9 @@
-const App = () => {
+const Movie = () => {
     return (
         <div>
-          
+
         </div>
     );
 };
 
-export {App};
+export {Movie};
