@@ -24,6 +24,7 @@
     align-items: center;
 
     font-family: 'Calibri', serif;
+    /*text-decoration: red;*/
 }
 
 .poster {
@@ -71,4 +72,26 @@
     font-size: 15px;
 
     font-family: 'Calibris', serif;
+}
+
+
+.Link:link{
+    text-decoration: none;
+    text-decoration-color: red;
+}
+.Link:visited{
+    text-decoration: none;
+    text-decoration-color: red;
+}
+.Link:focus{
+    text-decoration: none;
+    text-decoration-color: red;
+}
+.Link:hover {
+    text-decoration: none;
+    text-decoration-color: red;
+}
+.Link:active{
+    text-decoration: none;
+    text-decoration-color: red;
 }

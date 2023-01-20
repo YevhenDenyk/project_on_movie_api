@@ -1,12 +1,13 @@
 import css from './MoviesListCard.module.css'
 import {StarsRating} from "../StarsRating/StarsRating";
+import {Link} from "react-router-dom";
 
 const MoviesListCard = ({movie}) => {
     const {
         // adult,
         // backdrop_path,
         // genre_ids,
-        // id,
+        id,
         title,
         overview,
         // popularity,
@@ -20,10 +21,12 @@ const MoviesListCard = ({movie}) => {
     return (
         <div className={css.card}>
             <div>
-                <div className={css.poster}>
-                    <img src={`https://image.tmdb.org/t/p/w300/${poster_path}`} alt={title}/>
-                </div>
-                <div className={css.header}>{title}</div>
+                <Link to={`/detail-movie/${id}`} className={css.Link}>
+                    <div className={css.poster}>
+                        <img src={`https://image.tmdb.org/t/p/w300/${poster_path}`} alt={title}/>
+                    </div>
+                    <div className={css.header}>{title}</div>
+                </Link>
                 <div className={css.overview}>{overview}</div>
             </div>
             <div>
@@ -33,7 +36,6 @@ const MoviesListCard = ({movie}) => {
                 </div>
                 <div className={css.data}>{release_date}</div>
             </div>
-
         </div>
     );
 };

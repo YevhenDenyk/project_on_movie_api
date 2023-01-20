@@ -1,0 +1,13 @@
+.background {
+    box-sizing: border-box;
+border: solid 3px red;
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 90vh;
+    /*Змінити розмір відносно того скільки займе хедер*/
+    display: flex;
+    object-fit: cover;
+    filter: blur(1px) opacity(30%);
+}

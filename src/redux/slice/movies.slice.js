@@ -3,9 +3,10 @@ import {moviesService} from "../../services";
 
 const initialState = {
     movies: [],
-    pageMovies: null,
-    total_pages: null,
-    errors: null
+    // pageMovies: null,  // поточна сторінка - не знайшов для чого використати
+    // total_pages: null, // загальна кількість сторінок - не має сенсу, обмеження в 500 шт
+    errors: null,
+    detailMovie: {}
 }
 
 const getAllMovies = createAsyncThunk(
@@ -20,6 +21,18 @@ const getAllMovies = createAsyncThunk(
     }
 );
 
+const getDetailMovie = createAsyncThunk(
+    'getDetailMovie/moviesSlice',
+    async (id,{rejectWithValue})=>{
+        try {
+            const {data} = await moviesService.getMovie(id);
+            return data
+        }catch (e) {
+            return rejectWithValue(e.response.data)
+        }
+    }
+)
+
 const moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState,
@@ -28,19 +41,22 @@ const moviesSlice = createSlice({
         builder
             .addCase(getAllMovies.fulfilled, (state, action) => {
                 state.movies = action.payload.results
-                state.pageMovies = action.payload.page
-                state.total_pages = action.payload.total_pages
+                // state.pageMovies = action.payload.page
+                // state.total_pages = action.payload.total_pages
                 state.errors = null
             })
             .addCase(getAllMovies.rejected, (state, action) => {
                 state.errors = action.payload.errors
                 state.movies = []
             })
+            .addCase(getDetailMovie.fulfilled, (state, action) => {
+                state.detailMovie = action.payload
+            })
 
 });
 
 const {reducer: moviesReducer} = moviesSlice
 
-const moviesAction = {getAllMovies}
+const moviesAction = {getAllMovies,getDetailMovie}
 
 export {moviesAction, moviesReducer}
