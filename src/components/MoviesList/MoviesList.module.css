@@ -1,0 +1,21 @@
+.moviesList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navigate{
+    height: 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigate button{
+    height: 50px;
+    width: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+}

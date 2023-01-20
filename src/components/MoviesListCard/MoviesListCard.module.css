@@ -1,0 +1,74 @@
+.card {
+    border: 2px solid #e3e3e3;
+    box-shadow: 0 0 7px #666;
+    border-radius: 15px;
+
+    box-sizing: border-box;
+    width: 320px;
+    padding: 10px;
+    margin: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.header {
+    box-sizing: border-box;
+    padding: 10px;
+    height: 60px;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Calibri', serif;
+}
+
+.poster {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.poster img{
+    border-radius: 15px;
+}
+
+.overview {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+
+    font-family: 'Calibri Light', serif;
+}
+
+.votes {
+    box-sizing: border-box;
+    height: 30px;
+
+    display: flex;
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-between;*/
+}
+
+.stars{
+    width: 150px;
+
+}
+.vote{
+    font-family: 'Calibri Light', serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data {
+    box-sizing: border-box;
+    height: 20px;
+    font-size: 15px;
+
+    font-family: 'Calibris', serif;
+}
