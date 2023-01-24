@@ -4,7 +4,7 @@ const urls = {
     movie: 'movie',
     movies: 'discover/movie',
     genres: 'genre/movie/list',
-    search: 'search/keyword'
+    search: 'search/movie'
 }
 
 export {baseURL,urls}

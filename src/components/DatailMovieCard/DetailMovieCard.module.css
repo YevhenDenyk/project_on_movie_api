@@ -1,13 +1,65 @@
-.background {
-    box-sizing: border-box;
-border: solid 3px red;
+.master{
+    font-family: 'Calibri', serif;
 }
 
-.backgroundImage {
-    width: 100%;
+.backgroundImg {
+    width: 99%;
     height: 90vh;
     /*Змінити розмір відносно того скільки займе хедер*/
     display: flex;
     object-fit: cover;
-    filter: blur(1px) opacity(30%);
+    box-sizing: border-box;
+    filter: blur(3px) opacity(40%);
+    position: absolute;
+}
+
+.front {
+    /*border: solid 2px red;*/
+    height: 800px;
+
+    filter: opacity(100%);
+
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poster {
+    /*border: solid 2px green;*/
+    width: 500px;
+
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster img {
+    border-radius: 15px;
+}
+
+.detailedInf {
+    /*border: solid 2px yellow;*/
+    min-width: 500px;
+    max-width: 40%;
+    /*width: 60%;*/
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+}
+
+.title{
+
+}
+.title span{
+    margin: 10px;
+}
+
+.tagline {
+    font-family: ItalicT, serif  ;
 }
