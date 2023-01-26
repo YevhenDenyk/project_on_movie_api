@@ -10,6 +10,7 @@ import {Genres} from "../Genres/Genres";
 
 const MoviesList = () => {
 
+
     const dispatch = useDispatch();
     const {movies, errors, total_pages} = useSelector(state => state.moviesReducer);
 
@@ -27,12 +28,12 @@ const MoviesList = () => {
     }
     const numberPage = query.get('page')
 
+
     return (
         <div className={css.placeGenres}>
             <Genres/>
 
             <div>
-                    {/*<button onClick={getGenres}>test</button>*/}
                 <div className={css.moviesList}>
                     {movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
                     {errors && errors.map(err => <h1>{err}</h1>)}
@@ -49,3 +50,17 @@ const MoviesList = () => {
 }
 
 export {MoviesList}
+
+// const [query, setQuery] = useSearchParams({page: '1'});
+//
+// useEffect(() => {
+//     // dispatch(moviesAction.getAllMovies(query.get('page')))
+// }, [dispatch,query])
+//
+// const prevPage = () => {
+//     setQuery(value => ({page: value.get('page') - 1}))
+// }
+// const nextPage = () => {
+//     setQuery(value => ({page: +value.get('page') + 1}))
+// }
+// const numberPage = query.get('page')

@@ -47,6 +47,19 @@ const getSearchMovies = createAsyncThunk(
     }
 );
 
+//фільми по жанру
+// const getGenresMovies = createAsyncThunk(
+//     'genresMovies/moviesSlice',
+//     async (query,{rejectWithValue})=>{
+//         try {
+//             const {data} = await moviesService.getGenres(query);
+//             return data
+//         }catch (e) {
+//             return rejectWithValue(e.response.data)
+//         }
+//     }
+// );
+
 
 const moviesSlice = createSlice({
     name: 'moviesSlice',
@@ -72,6 +85,12 @@ const moviesSlice = createSlice({
                 state.total_results = action.payload.total_results
                 state.total_pages = action.payload.total_pages
             })
+            //фільми по жанру
+            // .addCase(getGenresMovies.fulfilled, (state, action) => {
+            //     state.movies = action.payload.results
+            //     state.total_results = action.payload.total_results
+            //     state.total_pages = action.payload.total_pages
+            // })
 
 });
 

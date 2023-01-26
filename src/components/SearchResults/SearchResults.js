@@ -7,6 +7,7 @@ const SearchResults = () => {
 
     const {searchMovies, total_results, total_pages} = useSelector(state => state.moviesReducer);
 
+
     return (
         <div>
             <h2> Total results: {total_results}</h2>
