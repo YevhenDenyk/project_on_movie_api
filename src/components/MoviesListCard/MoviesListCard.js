@@ -25,8 +25,8 @@ const MoviesListCard = ({movie}) => {
                     <div className={css.poster}>
                         <img src={`https://image.tmdb.org/t/p/w300/${poster_path}`} alt={title}/>
                     </div>
-                </Link>
                     <div className={css.header}>{title}</div>
+                </Link>
                 <div className={css.overview}>{overview}</div>
             </div>
             <div>
